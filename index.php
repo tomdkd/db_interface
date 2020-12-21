@@ -18,7 +18,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <button class="btn btn-success" data-toggle="modal" data-target="#add_connexion_modal"><i class="fas fa-plus mr-2"></i>Ajouter une connexion</button>
+                <button class="btn btn-outline-success" data-toggle="modal" data-target="#add_connexion_modal"><i class="fas fa-plus mr-2"></i>Ajouter une connexion</button>
                 <li class="nav-item dropdown ml-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Langage</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -29,6 +29,47 @@
             </ul>
         </div>
     </nav>
+
+    <div class="container-fluid">
+
+        <div class="row justify-content-center mt-5">
+            <div class="card col-xl-2 col-md-3 col-xs-8 mt-2 bg-success text-light shadow offset-md-1">
+                <div class="card-body">
+                    <p class="database-name text-center text-uppercase"><i class="fas fa-database mr-3"></i>ActiveDatabase</p>
+                    <p><b>IP:</b> <span class="server-ip ml-auto">152.0.0.1</span></p>
+                    <p><b>Status:</b> <span class="database-status"><i class="fas fa-check-circle mr-2"></i>Active</span></p>
+                    <div class="buttons text-right">
+                        <button class="btn btn-light border-dark"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-xl-2 col-md-3 col-xs-8 mt-2 bg-light text-dark shadow offset-md-1">
+                <div class="card-body">
+                    <p class="database-name text-center text-uppercase"><i class="fas fa-database mr-3"></i>InconnuDatabase</p>
+                    <p><b>IP:</b> <span class="server-ip ml-auto">152.0.0.1</span></p>
+                    <p><b>Status:</b> <span class="database-status"><i class="fas fa-question-circle mr-2"></i>Inconnu</span></p>
+                    <div class="buttons text-right">
+                        <button class="btn btn-light border-dark"><i class="fas fa-wifi"></i></button>
+                        <button class="btn btn-light border-dark"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-xl-2 col-md-3 col-xs-8 mt-2 bg-danger text-light shadow offset-md-1">
+                <div class="card-body">
+                    <p class="database-name text-center text-uppercase"><i class="fas fa-database mr-3"></i>ErreurDatabase</p>
+                    <p><b>IP:</b> <span class="server-ip ml-auto">152.0.0.1</span></p>
+                    <p><b>Status:</b> <span class="database-status"><i class="fas fa-exclamation-circle mr-2"></i>Erreur</span></p>
+                    <div class="buttons text-right">
+                        <button class="btn btn-light text-danger"><i class="fas fa-undo-alt"></i></button>
+                        <button class="btn btn-light text-danger"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <div class="modal fade" id="add_connexion_modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -58,8 +99,9 @@
                             <label for="db_name">Mot de passe</label>
                             <input type="password" class="form-control" id="password">
                         </div>
+                        <small>La nouvelle connexion sera enregistrée dans un fichier en local. Tous les mots de passe sont chiffrés.</small>
                         <div class="buttons text-right">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Annuler</button>
                             <button type="button" class="btn btn-primary"><i class="fas fa-plus mr-2"></i>Ajouter</button>
                         </div>
                     </form>
