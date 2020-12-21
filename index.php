@@ -11,7 +11,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Databases Status v1.0</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,17 +34,35 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ajouter une connexion</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-database mr-3"></i>Ajouter une connexion</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close</button>
-                    <button type="button" class="btn btn-primary"><i class="fas fa-plus mr-2"></i>Ajouter</button>
+                    <form>
+                        <div class="form-group">
+                            <label for="db_name">Nom de la base de données</label>
+                            <input type="text" class="form-control" id="db_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Adresse IP du serveur</label>
+                            <input type="text" class="form-control" id="ip_address">
+                            <small>Si la base de données se trouve sur ce serveur, renseignez simplement "localhost". Sinon, rentrez l'adresse IP.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="db_name">Nom d'utilisateur</label>
+                            <input type="text" class="form-control" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="db_name">Mot de passe</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="buttons text-right">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close</button>
+                            <button type="button" class="btn btn-primary"><i class="fas fa-plus mr-2"></i>Ajouter</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
